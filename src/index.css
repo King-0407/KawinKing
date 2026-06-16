@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+:root {
+  --bg: 0 0% 4%;
+  --surface: 0 0% 8%;
+  --text: 0 0% 96%;
+  --muted: 0 0% 53%;
+  --stroke: 0 0% 12%;
+  --accent: 0 0% 96%;
+}
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-display: 'Instrument Serif', 'Georgia', serif;
+
+  --color-bg: hsl(var(--bg));
+  --color-surface: hsl(var(--surface));
+  --color-text-primary: hsl(var(--text));
+  --color-muted: hsl(var(--muted));
+  --color-stroke: hsl(var(--stroke));
+  --color-accent: hsl(var(--accent));
+}
+
+/* Accent Gradients & Borders */
+.accent-gradient {
+  background: linear-gradient(90deg, #89AACC 0%, #4E85BF 100%);
+}
+
+.accent-gradient-text {
+  background: linear-gradient(90deg, #89AACC 0%, #4E85BF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.accent-border {
+  border: 1px solid transparent;
+  background-image: linear-gradient(#0a0a0a, #0a0a0a), linear-gradient(90deg, #89AACC 0%, #4E85BF 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.pill-blur {
+  backdrop-filter: blur(12px);
+  background: rgba(20, 20, 20, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Keyframes */
+@keyframes scroll-down {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(200%);
+  }
+}
+
+@keyframes role-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Animation Helper Classes */
+.animate-scroll-down {
+  animation: scroll-down 1.5s ease-in-out infinite;
+}
+
+.animate-role-fade-in {
+  animation: role-fade-in 0.4s ease-out forwards;
+}
+
+.animate-gradient-shift {
+  background-size: 200% 200%;
+  animation: gradient-shift 6s ease infinite;
+}
+
+/* Halftone Grid Overlay */
+.halftone-overlay {
+  background-image: radial-gradient(circle, #000 1px, transparent 1px);
+  background-size: 4px 4px;
+}
+
+/* Base resets & styles */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+  background-color: hsl(var(--bg));
+  color: hsl(var(--text));
+}
+
+body {
+  background-color: hsl(var(--bg));
+  color: hsl(var(--text));
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Clean Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--bg));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--stroke));
+  border-radius: 999px;
+  border: 2px solid hsl(var(--bg));
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted));
+}
+
+/* Glass reflection sweep effect */
+.glass-reflection {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-reflection::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(105deg, transparent 40%, rgba(255, 255, 255, 0.08) 50%, transparent 60%);
+  background-size: 200% 200%;
+  pointer-events: none;
+  z-index: 25;
+  transform: skewX(-20deg);
+  transition: none;
+}
+
+.glass-reflection:hover::after {
+  left: 150%;
+  transition: left 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
