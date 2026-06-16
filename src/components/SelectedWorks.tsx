@@ -17,7 +17,7 @@ const PROJECTS: Project[] = [
     title: "ProposeIQ",
     category: "AI-Powered Proposal Evaluation Product",
     description: "A multi-agent AI desktop app that autonomously processes RFP documents using specialized AI agents with FastAPI, LangGraph, and MongoDB.",
-    imageUrl: "assets/ProposeIQ.png",
+    imageUrl: "/assets/ProposeIQ.png",
     colSpanClass: "md:col-span-12 lg:col-span-7",
     link: "https://github.com/King-0407/Propose-IQ-Lakshana-S-Kawin-King-C-"
   },
@@ -35,7 +35,7 @@ const PROJECTS: Project[] = [
     title: "HewQ — Freelancer Work & Invoice Manager UI/UX Design",
     category: "UI/UX Design + SaaS Product Design",
     description: "Designed a mobile-first SaaS application for freelancers to manage clients, projects, invoices, payment tracking, and income analytics, backed by UX research, user flows, and interactive prototyping in Figma.",
-    imageUrl: "assets/Hew.png",
+    imageUrl: "/assets/Hew.png",
     colSpanClass: "md:col-span-12",
     link: "https://github.com/King-0407"
   },
@@ -44,7 +44,7 @@ const PROJECTS: Project[] = [
     title: "AI Resume Screening System",
     category: "NLP Evaluation System",
     description: "NLP-powered resume screening system with structured dashboard and intelligent candidate evaluation.",
-    imageUrl: "assets/Resu.png",
+    imageUrl: "/assets/Resu.png",
     colSpanClass: "md:col-span-12 lg:col-span-6",
     link: "https://github.com/King-0407/AI_Resume_Screener"
   },
@@ -53,7 +53,7 @@ const PROJECTS: Project[] = [
     title: "PDF Summarizer with Conversational Chatbot",
     category: "Generative AI",
     description: "AI-powered chatbot for real-time PDF summarization and context-aware responses.",
-    imageUrl: "assets/PDF.png",
+    imageUrl: "/assets/PDF.png",
     colSpanClass: "md:col-span-12 lg:col-span-6",
     link: "https://github.com/King-0407/PDF_Summarizer-with-Chatbot"
   }
