@@ -35,7 +35,7 @@ const PROJECTS: Project[] = [
     title: "HewQ — Freelancer Work & Invoice Manager UI/UX Design",
     category: "UI/UX Design + SaaS Product Design",
     description: "Designed a mobile-first SaaS application for freelancers to manage clients, projects, invoices, payment tracking, and income analytics, backed by UX research, user flows, and interactive prototyping in Figma.",
-    imageUrl: "assets/Hew.png",
+    imageUrl: "/assets/Hew.png",
     colSpanClass: "md:col-span-12",
     link: "https://github.com/King-0407"
   },
