@@ -181,7 +181,7 @@ export default function About({ onOpenResume }: AboutProps) {
                 style={{ transformStyle: 'preserve-3d', transition: 'box-shadow 0.3s ease, border-color 0.3s ease' }}
               >
                 <img 
-                  src="/assets/Website image 1.jpeg" 
+                  src="/assets/image.png" 
                   alt="Kawin King C Portrait" 
                   className="w-full h-full object-cover opacity-100 group-hover:scale-[1.03] transition-all duration-700 ease-out"
                   referrerPolicy="no-referrer"
