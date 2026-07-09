@@ -226,7 +226,7 @@ export default function About({ onOpenResume }: AboutProps) {
                   <p className="text-xs text-muted mt-0.5 font-medium">KPR Institute of Engineering and Technology</p>
                   <p className="text-xs text-text-primary/80 font-bold mt-2 inline-flex items-center gap-1">
                     <span className="accent-gradient w-1.5 h-1.5 rounded-full" />
-                    CGPA: 7.5 / 10
+                    CGPA: 7.6 / 10
                   </p>
                 </div>
               </div>
