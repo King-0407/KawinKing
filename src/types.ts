@@ -11,6 +11,8 @@ export interface Project {
   imageUrl: string;
   colSpanClass: string; // Tailored column span in Bento grid, e.g. "md:col-span-7", "md:col-span-5"
   link?: string;
+  caseStudyUrl?: string;
+  designUrl?: string;
 }
 
 export interface JournalEntry {

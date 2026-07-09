@@ -28,7 +28,8 @@ const PROJECTS: Project[] = [
     description: "Premium pizza delivery mobile app designed in Figma featuring cinematic UI and modern UX systems.",
     imageUrl: "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1000&auto=format&fit=crop",
     colSpanClass: "md:col-span-12 lg:col-span-5",
-    link: "https://www.figma.com/proto/HMccAq19cDcFh1RHDzDUU7/Dertz-Pizza-s-%E2%80%94-Mobile-App-UI?node-id=5-2&page-id=0%3A1&starting-point-node-id=506%3A322&t=awMUILyNo24HorvF-1"
+    caseStudyUrl: "https://github.com/King-0407",
+    designUrl: "https://www.figma.com/proto/HMccAq19cDcFh1RHDzDUU7/Dertz-Pizza-s-%E2%80%94-Mobile-App-UI?node-id=5-2&page-id=0%3A1&starting-point-node-id=506%3A322&t=awMUILyNo24HorvF-1"
   },
   {
     id: "hewq",
@@ -37,7 +38,8 @@ const PROJECTS: Project[] = [
     description: "Designed a mobile-first SaaS application for freelancers to manage clients, projects, invoices, payment tracking, and income analytics, backed by UX research, user flows, and interactive prototyping in Figma.",
     imageUrl: "/assets/Hew.png",
     colSpanClass: "md:col-span-12",
-    link: "https://github.com/King-0407"
+    caseStudyUrl: "https://github.com/King-0407",
+    designUrl: "https://www.figma.com"
   },
   {
     id: "resume-screening",
@@ -188,15 +190,46 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onSelectProject }) =
       </div>
 
       {/* Premium Floating hover card overlay */}
-      <div className="absolute inset-0 z-30 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 backdrop-blur-sm transition-all duration-300 pointer-events-none">
-        <div className="p-1 rounded-full overflow-hidden relative">
-          <div className="absolute inset-0 accent-gradient animate-gradient-shift rounded-full" />
-          
-          <div className="relative bg-[#0d0d0d] text-white px-6 py-3 rounded-full text-xs font-semibold uppercase tracking-wider flex items-center gap-1">
-            <span>View &mdash; <span className="font-display italic text-sm">{project.title}</span></span>
+      {project.caseStudyUrl && project.designUrl ? (
+        <div className="absolute inset-0 z-30 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 backdrop-blur-sm transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
+          <div className="flex flex-row items-center gap-4 px-6">
+            <a
+              href={project.caseStudyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="group/btn relative p-[1px] rounded-full overflow-hidden inline-flex items-center justify-center transition-transform duration-300 hover:scale-105 active:scale-95 shadow-[0_8px_30px_rgb(0,0,0,0.4)]"
+            >
+              <div className="absolute inset-0 accent-gradient animate-gradient-shift rounded-full opacity-90 group-hover/btn:opacity-100 transition-opacity" />
+              <div className="relative bg-[#0d0d0d] text-white px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider whitespace-nowrap">
+                View Case Study
+              </div>
+            </a>
+            <a
+              href={project.designUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="group/btn relative p-[1px] rounded-full overflow-hidden inline-flex items-center justify-center transition-transform duration-300 hover:scale-105 active:scale-95 shadow-[0_8px_30px_rgb(0,0,0,0.4)]"
+            >
+              <div className="absolute inset-0 accent-gradient animate-gradient-shift rounded-full opacity-90 group-hover/btn:opacity-100 transition-opacity" />
+              <div className="relative bg-[#0d0d0d] text-white px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider whitespace-nowrap">
+                View Design
+              </div>
+            </a>
           </div>
         </div>
-      </div>
+      ) : (
+        <div className="absolute inset-0 z-30 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 backdrop-blur-sm transition-all duration-300 pointer-events-none">
+          <div className="p-1 rounded-full overflow-hidden relative">
+            <div className="absolute inset-0 accent-gradient animate-gradient-shift rounded-full" />
+            
+            <div className="relative bg-[#0d0d0d] text-white px-6 py-3 rounded-full text-xs font-semibold uppercase tracking-wider flex items-center gap-1">
+              <span>View &mdash; <span className="font-display italic text-sm">{project.title}</span></span>
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );
