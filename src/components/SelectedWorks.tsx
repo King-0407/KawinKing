@@ -28,7 +28,7 @@ const PROJECTS: Project[] = [
     description: "Premium pizza delivery mobile app designed in Figma featuring cinematic UI and modern UX systems.",
     imageUrl: "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1000&auto=format&fit=crop",
     colSpanClass: "md:col-span-12 lg:col-span-5",
-    caseStudyUrl: "https://github.com/King-0407",
+    caseStudyUrl: "https://app.notion.com/p/DERTZ-Pizza-UI-UX-Case-Study-390bc98ccb60807ba5d3e89df298375e?source=copy_link",
     designUrl: "https://www.figma.com/proto/HMccAq19cDcFh1RHDzDUU7/Dertz-Pizza-s-%E2%80%94-Mobile-App-UI?node-id=5-2&page-id=0%3A1&starting-point-node-id=506%3A322&t=awMUILyNo24HorvF-1"
   },
   {
@@ -38,8 +38,8 @@ const PROJECTS: Project[] = [
     description: "Designed a mobile-first SaaS application for freelancers to manage clients, projects, invoices, payment tracking, and income analytics, backed by UX research, user flows, and interactive prototyping in Figma.",
     imageUrl: "/assets/Hew.png",
     colSpanClass: "md:col-span-12",
-    caseStudyUrl: "https://github.com/King-0407",
-    designUrl: "https://www.figma.com"
+    caseStudyUrl: "https://app.notion.com/p/HewQ-UI-UX-Case-Study-39235451b85b80c3b76bdf6cb853b239?source=copy_link",
+    designUrl: "https://www.figma.com/proto/XFNbsDCFPuLu1IM7cx4sok/HewQ?node-id=449-342&viewport=9456%2C-142%2C0.36&t=Cj6afPEMc0EKdxpn-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=449%3A342&page-id=0%3A1"
   },
   {
     id: "resume-screening",
