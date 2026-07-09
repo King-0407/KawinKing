@@ -189,7 +189,7 @@ export default function About({ onOpenResume }: AboutProps) {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
                 <div className="absolute bottom-6 left-6 pointer-events-none select-none">
                   <h3 className="text-xl font-display italic text-white leading-none mb-1">Kawin King C</h3>
-                  <p className="text-xs text-muted">UI/UX Designer & Full Stack Developer</p>
+                  <p className="text-xs text-muted">UI/UX Designer & Product Designer</p>
                 </div>
               </div>
             </div>
